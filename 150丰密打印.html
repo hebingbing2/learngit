@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script language="javascript" src="LodopFuncs.js"></script>
+    <script language="javascript" type="text/javascript">
+        function CreatePrintPage_150(){
+            // ●	PRINT_INIT(strPrintTaskName)打印初始化
+            LODOP.PRINT_INIT("150丰密打印");
+            // ●	SET_PRINT_PAGESIZE(intOrient,intPageWidth,intPageHeight,strPageName)设定纸张大小
+            LODOP.SET_PRINT_PAGESIZE(1,"96mm","150mm","主运单区");
+            // LODOP.ADD_PRINT_IMAGE(0,0,"25mm","10mm","<img border='0' style='width:85px;height:30px;' src='logo.png' />");  
+            // LODOP.ADD_PRINT_IMAGE(0,"75mm","25mm","10mm","<img border='0' style='width:85px;height:30px;' src='热线.png' />");  
+            LODOP.ADD_PRINT_TEXT("10mm","11mm","8mm","5.37mm","ESC");
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体");
+            LODOP.SET_PRINT_STYLEA(0, "FontSize", 6);
+            LODOP.ADD_PRINT_TEXT("10mm","20mm","20mm","5.37mm","第一次打印");
+            LODOP.SET_PRINT_STYLEA(0, "FontSize", 6);
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体");
+            LODOP.ADD_PRINT_TEXT("10mm","33mm","40mm","5.37mm","打印时间 2019-06-12 00:00");
+            LODOP.SET_PRINT_STYLEA(0, "FontSize", 6);
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体");
+            //编码 母单号
+            LODOP.ADD_PRINT_BARCODE("15mm","10.7mm","54mm","13mm","128B","123456789012");
+            LODOP.SET_PRINT_STYLEA(0,"ShowBarText",0);  
+            LODOP.ADD_PRINT_TEXT("29mm","8mm","10mm","5mm","1/1");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体");  
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",10);  
+            LODOP.ADD_PRINT_TEXT("29mm","16mm","15mm","5mm","母单号");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体");  
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",10);  
+            LODOP.ADD_PRINT_TEXT("29mm","30mm","30mm","5mm","444 004 772 115");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","arial"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",10);  
+            LODOP.ADD_PRINT_IMAGE('10mm',"76.4mm","20mm","20mm","<img border='0' style='width:19mm;height:19mm;' src='20_20 T6.png' />");  
+            LODOP.ADD_PRINT_LINE("33.36mm",0,"33.36mm","96mm",0,1);  
+            LODOP.ADD_PRINT_LINE("33.36mm","0mm", "88.36mm", "0mm", 0,1); //线，竖杠(上边距1,1左边距,上边距2,2左边距,intLineStyle, intLineWidth)
+            LODOP.ADD_PRINT_TEXT("34mm","10mm","85mm","10mm","755WB-755DF");  //目的地 路由信息
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",33);  
+            LODOP.SET_PRINT_STYLEA(0,"Bold",1); 
+            LODOP.ADD_PRINT_LINE("33.36mm", '96mm', "88.36mm", '96mm', 0,0); //线，竖杠(上边距1,1左边距,上边距2,2左边距,intLineStyle, intLineWidth)
+            //收件人信息
+            LODOP.ADD_PRINT_IMAGE('45mm',"3mm" ,"7mm","7mm","<img border='0' style='width:24px;height:24px;' src='收（7mm）.png' />");  
+            LODOP.ADD_PRINT_TEXT('45mm',"13mm","","5mm","名字");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9); 
+            LODOP.ADD_PRINT_TEXT('45mm',"22mm","30mm","5mm","125****4856");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9); 
+            LODOP.ADD_PRINT_TEXT('45mm',"45mm","35mm","5mm","顺丰速运有限公司");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9);
+            LODOP.ADD_PRINT_TEXT('50mm',"13mm","65mm","10mm","重庆市重庆市渝北区财富中心财富大厦B座重庆显格房地产顾问有限公司");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9);
+            LODOP.ADD_PRINT_IMAGE('45mm',"78mm","17mm","9mm","<img border='0' style='width:16mm;height:8mm;' src='COD图片（宽17mm高9mm）.png' />");  
+            LODOP.ADD_PRINT_LINE("60.36mm",0,"60.36mm","96mm",0,1);  
+            LODOP.ADD_PRINT_TEXT('61mm',"6mm","30mm","5mm","到付 22 元");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","Arial"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9);
+            LODOP.SET_PRINT_STYLEA(0,"Bold",1); 
+            LODOP.ADD_PRINT_LINE("65.36mm",0,"65.36mm","33mm",0,1);   //横线
+            LODOP.ADD_PRINT_TEXT('66mm',"5mm","30mm","5mm","A22");  //进港信息 A22 
+            LODOP.SET_PRINT_STYLEA(0,"FontName","Arial"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",40);
+            LODOP.SET_PRINT_STYLEA(0,"Bold",1); 
+            LODOP.ADD_PRINT_LINE("88.36mm","0mm","88.36mm","65.3mm",0,1); //最底部横线
+            LODOP.ADD_PRINT_LINE("60.36mm", "33mm", "88.36mm", "33mm", 0,1);  //A22 右边竖线
+            LODOP.ADD_PRINT_LINE("60.36mm", "65mm", "88.36mm", "65mm", 0,1);  //二维码 右边竖线
+            LODOP.ADD_PRINT_BARCODE("64.36mm",'38mm','25mm','25mm',"QRCode","*123ABC4567890*"); //二维码
+            LODOP.ADD_PRINT_TEXT('60.36mm',"66mm",'9.5mm','26mm',"已检视");  //是否检视
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",20);
+            LODOP.SET_PRINT_STYLEA(0,"Bold",1); 
+            LODOP.ADD_PRINT_LINE("60.36mm","74mm", "88.36mm", "74mm", 0,1);  //检视右边竖线
+            LODOP.ADD_PRINT_IMAGE('61.36mm',"76mm" ,"15mm","17mm","<img border='0' style='width:55px;height:65px;' src='A标.jpg' />");   //A/B标图片
+            LODOP.ADD_PRINT_LINE("80.01mm","74mm","80.01mm","96mm",0,1);   //A/B标图片 下面横线
+            LODOP.ADD_PRINT_LINE("88.01mm","74mm","88.01mm","96mm",0,1);   //A/B标图片 下面横线
+            LODOP.ADD_PRINT_TEXT('79mm',"78mm",'16mm','8mm',"1A");  //是否检视
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",30);
+            LODOP.SET_PRINT_STYLEA(0,"Bold",1); 
+            ///附加连区样式
+            LODOP.ADD_PRINT_LINE("90mm",0,"90mm","96mm",0,1);   //头部横线
+            LODOP.ADD_PRINT_LINE("90mm", '0', "150mm", '0', 0,1); //左边线，竖杠 
+            LODOP.ADD_PRINT_LINE("90mm", '96mm', "150mm", '96mm', 0,1); //左边线，竖杠 
+            LODOP.ADD_PRINT_IMAGE('91mm','2mm' ,"7mm","7mm","<img border='0' style='width:24px;height:24px;' src='寄(7mm).png' />");
+            LODOP.ADD_PRINT_TEXT('92mm',"12mm",'15mm','5mm',"熊小二");  // 寄件方 姓名
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9);
+            LODOP.ADD_PRINT_TEXT('92mm',"25mm",'25mm','5mm',"135****8564");  // 寄件方 联系电话
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9);
+            LODOP.ADD_PRINT_TEXT('96mm',"12mm",'80mm','10mm',"上海市浦东新区世纪大佬88号");  // 寄件方 地址
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9);
+            LODOP.ADD_PRINT_LINE("102mm",0,"102mm","96mm",0,1);   //分割横线1
+            LODOP.ADD_PRINT_TEXT('103.5mm',"4mm",'20mm','10mm',"增值服务：");  // 增值服务
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('103.5mm',"20mm",'60mm','10mm',"没有什么增值服务");  // 增值服务内容
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('108.5mm',"4mm",'20mm','10mm',"寄托物：");  // 寄托物品
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('108.5mm',"20mm",'60mm','10mm',"寄托物品没有");  // 寄托物品内容
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('113mm',"4mm",'20mm','10mm',"计费重量：");  // 计费重量：
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('113mm',"20mm",'10mm','5mm',"1kg");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('113mm',"30mm",'20mm','10mm',"实际重量：");  // 实际重量：
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('1113mm',"45mm",'10mm','5mm',"1kg");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('113mm',"60mm",'20mm','10mm',"费用合计：");  // 费用合计：
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('113mm',"77mm",'10mm','5mm',"22元");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_LINE("126mm",0,"126mm","96mm",0,1);   //分割横线2
+            LODOP.ADD_PRINT_IMAGE('128mm','8mm' ,"21mm","21mm","<img border='0' style='width:75px;height:75px;' src='21_21 轻放.png' />");
+            LODOP.ADD_PRINT_IMAGE('128mm','37mm' ,"21mm","21mm","<img border='0' style='width:75px;height:75px;' src='21_21 蟹.png' />");
+            LODOP.ADD_PRINT_IMAGE('128mm','67mm' ,"21mm","21mm","<img border='0' style='width:75px;height:75px;' src='POD.jpg' />");
+            LODOP.ADD_PRINT_LINE("150mm",0,"150mm","96mm",0,1);   //分割横线2
+
+        }
+        function CreatePrintPage_180(){
+            LODOP.PRINT_INIT("180丰密打印");
+            // LODOP.SET_PRINT_PAGESIZE(1,"96mm","192mm","主运单区");   //设定纸张大小
+            LODOP.ADD_PRINT_LINE("1mm","1mm","1mm","96mm",0,1);     //初始横线
+            LODOP.SET_PRINT_STYLEA(0,"Color","#F2F2F2");            
+            LODOP.ADD_PRINT_IMAGE("2mm","1mm","25mm","10mm","<img border='0' style='width:25mm;height:9mm;' src='logo.png' />");    //顺丰logo
+            LODOP.ADD_PRINT_IMAGE("2mm","69mm","25mm","10mm","<img border='0' style='width:25mm;height:9mm;' src='热线.png' />");  //顺丰热线电话
+            //系统打印来源
+            LODOP.ADD_PRINT_TEXT("13mm","10mm","15mm","5.37mm","00856602");
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体");
+            LODOP.SET_PRINT_STYLEA(0, "FontSize", 6);
+            LODOP.ADD_PRINT_TEXT("13mm","22mm","8mm","5.37mm","ESC");
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体");
+            LODOP.SET_PRINT_STYLEA(0, "FontSize", 6);
+            LODOP.ADD_PRINT_TEXT("13mm","32mm","22mm","5.37mm","第一次打印");
+            LODOP.SET_PRINT_STYLEA(0, "FontSize", 6);
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体");
+            LODOP.ADD_PRINT_TEXT("13mm","46mm","40mm","5.37mm","打印时间 2019-06-12 00:00");
+            LODOP.SET_PRINT_STYLEA(0, "FontSize", 6);
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体");
+            //头部分割银线
+            LODOP.ADD_PRINT_LINE("18mm","1mm","18mm","96mm",0,1);     //横线
+            LODOP.SET_PRINT_STYLEA(0,"Color","#F1F1F1");    
+            LODOP.ADD_PRINT_LINE("18mm","1mm","41mm","1mm",0,1);     //竖线
+            LODOP.SET_PRINT_STYLEA(0,"Color","#F1F1F1");        
+            LODOP.ADD_PRINT_LINE("18mm","96mm","41mm","96mm",0,1);     //竖线
+            LODOP.SET_PRINT_STYLEA(0,"Color","#F1F1F1");
+            //打印条码
+            LODOP.ADD_PRINT_BARCODE("20mm","15mm","54mm","13mm","128B","123456789012");    //打印条码
+            LODOP.SET_PRINT_STYLEA(0,"ShowBarText",0);  
+            //子母件单号、汉字、件数标识、
+            LODOP.ADD_PRINT_TEXT("35mm","13mm","10mm","5mm","1/1");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体");  
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",10);  
+            LODOP.ADD_PRINT_TEXT("34mm","22mm","25mm","5mm","母单号");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体");  
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",10);  
+            LODOP.ADD_PRINT_TEXT("34mm","38mm","30mm","5mm","444 004 772 115");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","arial"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",10);  
+            LODOP.ADD_PRINT_TEXT("38mm","22mm","25mm","5mm","子单号");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体");  
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",10);  
+            LODOP.ADD_PRINT_TEXT("38mm","38mm","30mm","5mm","444 004 772 125");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","arial"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",10);  
+            //运单时效类型 T4 / 46 /
+            LODOP.ADD_PRINT_IMAGE('19mm',"71mm","20mm","20mm","<img border='0' style='width:19mm;height:19mm;' src='20_20 T4.png' />"); 
+            //分割银线
+            // LODOP.ADD_PRINT_LINE("41mm","1mm","41mm","96mm",0,1);     //横线    
+            // LODOP.SET_PRINT_STYLEA(0,"Color","#F1F1F1");    
+            LODOP.ADD_PRINT_LINE("42mm","1mm","42mm","96mm",0,1);       //收件人信息分割线 开始
+            LODOP.ADD_PRINT_LINE("42mm", "1mm", "113mm", "1mm", 0,1); //线，竖杠(上边距1,1左边距,上边距2,2左边距,intLineStyle, intLineWidth)
+            LODOP.ADD_PRINT_LINE("42mm", "96mm", "113mm", "96mm", 0,1); //线，竖杠(上边距1,1左边距,上边距2,2左边距,intLineStyle, intLineWidth)
+            
+            LODOP.ADD_PRINT_TEXT("44mm","6mm","95mm","5mm","755WB-755DF");  //目的地 路由信息
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",33);  
+            LODOP.SET_PRINT_STYLEA(0,"Bold",1); 
+            //收件人图标
+            LODOP.ADD_PRINT_IMAGE('58mm',"6mm","7mm","7mm","<img border='0' style='width:6mm;height:6mm;' src='收（7mm）.png' />");  
+            //收件人信息 
+            LODOP.ADD_PRINT_TEXT('57mm',"15mm","30mm","5mm","收件人名");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9); 
+            LODOP.ADD_PRINT_TEXT('57mm',"43mm","30mm","5mm","125****4856");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9); 
+            LODOP.ADD_PRINT_TEXT('62mm',"15mm","64mm","5mm","顺丰速运有限公司");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9);
+            LODOP.ADD_PRINT_TEXT('67mm',"15mm","64mm","10mm","重庆市重庆市渝北区财富中心财富大厦B座重庆显格房地产顾问有限公司");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9);
+            LODOP.ADD_PRINT_IMAGE('57mm',"77mm","17mm","9mm","<img border='0' style='width:16mm;height:8mm;' src='COD图片（宽17mm高9mm）.png' />");  
+            //收件人信息  分割线 结束
+            LODOP.ADD_PRINT_LINE("80mm","1mm","80mm","96mm",0,1);  
+            //到付 钱数
+            LODOP.ADD_PRINT_TEXT('82.5mm',"10mm","30mm","5mm","到付 22 元");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","Arial"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9);
+            LODOP.SET_PRINT_STYLEA(0,"Bold",1); 
+            LODOP.ADD_PRINT_LINE("89mm","1mm","89mm","32mm",0,1);   //横线
+            LODOP.ADD_PRINT_LINE("80mm","32mm","113mm","32mm",0,1);   //竖线分割
+            //进港信息 A22 
+            LODOP.ADD_PRINT_TEXT('92mm',"4mm","30mm","20mm","A22");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","Arial"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",40);
+            LODOP.SET_PRINT_STYLEA(0,"Bold",1); 
+            LODOP.ADD_PRINT_LINE("113mm","1mm","113mm","96mm",0,1); //最底部横线
+            //二维码
+            LODOP.ADD_PRINT_BARCODE("84mm",'35mm','25mm','25mm',"QRCode","*123ABC4567890*"); //二维码
+            LODOP.ADD_PRINT_LINE("80mm","58mm", "113mm", "58mm", 0,1);  //二维码 右边竖线
+            //是否检视
+            LODOP.ADD_PRINT_TEXT('81mm',"59mm",'10mm','28mm',"已检视");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",20);
+            LODOP.SET_PRINT_STYLEA(0,"Bold",1); 
+            LODOP.ADD_PRINT_LINE("80mm", "68mm", "113mm", "68mm",0,1);  //检视右边竖线
+            //A/B标图片
+            LODOP.ADD_PRINT_IMAGE('82mm',"73mm","15mm","19mm","<img border='0' style='width:14mm;height:18mm;' src='A标.jpg' />");    
+            LODOP.ADD_PRINT_LINE("101mm","68mm","101mm","96mm",0,1);   //A/B标图片 下面横线
+            //是否检视 1A
+            LODOP.ADD_PRINT_TEXT('102mm',"73mm",'16mm','8mm',"1A");  //是否检视
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",30);
+            LODOP.SET_PRINT_STYLEA(0,"Bold",1); 
+            ///附加连区样式
+            ///附加连区样式
+            ///附加连区样式
+            LODOP.ADD_PRINT_LINE("115mm","1mm","115mm","96mm",0,1);   //头部横线  
+            LODOP.ADD_PRINT_LINE("115mm", '1mm', "175mm", '1mm', 0,1); //左边线，竖杠 
+            LODOP.ADD_PRINT_LINE("115mm", '96mm', "175mm", '96mm', 0,1); //左边线，竖杠
+            //logo and 热线
+            LODOP.ADD_PRINT_IMAGE("116mm","3mm","22mm","6mm","<img border='0' style='width:22mm;height:5mm;' src='logo.png' />");    //顺丰logo
+            LODOP.ADD_PRINT_IMAGE("122mm","3mm","22mm","6mm","<img border='0' style='width:22mm;height:5mm;' src='热线.png' />");  //顺丰热线电话
+            //寄件人 图标
+            LODOP.ADD_PRINT_IMAGE('118mm','27mm' ,"7mm","7mm","<img border='0' style='width:6mm;height:6mm;' src='寄(7mm).png' />");
+            LODOP.ADD_PRINT_TEXT('117mm',"36mm",'15mm','5mm',"熊小二");  // 寄件方 姓名
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9);
+            LODOP.ADD_PRINT_TEXT('117mm',"50mm",'25mm','5mm',"135****8564");  // 寄件方 联系电话
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9);
+            LODOP.ADD_PRINT_TEXT('117mm',"73mm",'25mm','5mm',"上海电子市场");  // 寄件方 公司名
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9);
+            LODOP.ADD_PRINT_TEXT('122mm',"36mm",'80mm','10mm',"上海市浦东新区世纪大佬88号");  // 寄件方 地址
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9);
+            //分割线
+            LODOP.ADD_PRINT_LINE("129mm","1mm","129mm","96mm",0,1);   //分割横线1
+            // 增值服务
+            LODOP.ADD_PRINT_TEXT('131mm',"4mm",'20mm','10mm',"增值服务：");  // 增值服务
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('131mm',"20mm",'60mm','10mm',"没有什么增值服务");  // 增值服务内容
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('135mm',"4mm",'20mm','10mm',"寄托物：");  // 寄托物品
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('135mm',"20mm",'60mm','10mm',"寄托物品没有");  // 寄托物品内容
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('139mm',"4mm",'20mm','10mm',"件数：");  // 件数：
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('139mm',"13mm",'10mm','5mm',"1件");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('139mm',"20mm",'20mm','10mm',"计费重量：");  // 计费重量：
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('139mm',"35mm",'10mm','5mm',"1kg");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('139mm',"45mm",'20mm','10mm',"实际重量：");  // 实际重量：
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('139mm',"60mm",'10mm','5mm',"1kg");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('139mm',"70mm",'20mm','10mm',"费用合计：");  // 费用合计：
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('139mm',"85mm",'10mm','5mm',"22元");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            //分割线
+            LODOP.ADD_PRINT_LINE("151mm","1mm","151mm","96mm",0,1);   //分割横线2
+            LODOP.ADD_PRINT_IMAGE('153mm','8mm' ,"21mm","21mm","<img border='0' style='width:75px;height:75px;' src='21_21 轻放.png' />");
+            LODOP.ADD_PRINT_IMAGE('153mm','37mm' ,"21mm","21mm","<img border='0' style='width:75px;height:75px;' src='21_21 蟹.png' />");
+            LODOP.ADD_PRINT_IMAGE('153mm','67mm' ,"21mm","21mm","<img border='0' style='width:75px;height:75px;' src='POD.jpg' />");
+            LODOP.ADD_PRINT_LINE("175mm","1mm","175mm","96mm",0,1);   //分割横线2
+
+        }
+        function CreatePrintPage_210(){
+             LODOP.PRINT_INIT("210丰密打印");
+            // LODOP.SET_PRINT_PAGESIZE(1,"210mm","279mm","主运单区");
+            LODOP.ADD_PRINT_IMAGE(0,0,"25mm","10mm","<img border='0' style='width:85px;height:30px;' src='logo.png' />");  
+            LODOP.ADD_PRINT_IMAGE(0,"75mm","25mm","10mm","<img border='0' style='width:85px;height:30px;' src='热线.png' />");  
+            LODOP.ADD_PRINT_TEXT("10mm","11mm","8mm","5.37mm","ESC");
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体");
+            LODOP.SET_PRINT_STYLEA(0, "FontSize", 6);
+            LODOP.ADD_PRINT_TEXT("10mm","20mm","20mm","5.37mm","第一次打印");
+            LODOP.SET_PRINT_STYLEA(0, "FontSize", 6);
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体");
+            LODOP.ADD_PRINT_TEXT("10mm","33mm","40mm","5.37mm","打印时间 2019-06-12 00:00");
+            LODOP.SET_PRINT_STYLEA(0, "FontSize", 6);
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体");
+            //编码 母单号
+            LODOP.ADD_PRINT_BARCODE("15mm","10.7mm","54mm","13mm","128B","123456789012");
+            LODOP.SET_PRINT_STYLEA(0,"ShowBarText",0);  
+            LODOP.ADD_PRINT_TEXT("29mm","8mm","10mm","5mm","1/1");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体");  
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",10);  
+            LODOP.ADD_PRINT_TEXT("29mm","16mm","15mm","5mm","母单号");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体");  
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",10);  
+            LODOP.ADD_PRINT_TEXT("29mm","30mm","30mm","5mm","444 004 772 115");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","arial"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",10);  
+            LODOP.ADD_PRINT_IMAGE('10mm',"76.4mm","20mm","20mm","<img border='0' style='width:19mm;height:19mm;' src='20_20 T6.png' />");  
+            LODOP.ADD_PRINT_LINE("33.36mm",0,"33.36mm","96mm",0,1);  
+            LODOP.ADD_PRINT_LINE("33.36mm","0mm", "88.36mm", "0mm", 0,1); //线，竖杠(上边距1,1左边距,上边距2,2左边距,intLineStyle, intLineWidth)
+            LODOP.ADD_PRINT_TEXT("34mm","10mm","85mm","10mm","755WB-755DF");  //目的地 路由信息
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",33);  
+            LODOP.SET_PRINT_STYLEA(0,"Bold",1); 
+            LODOP.ADD_PRINT_LINE("33.36mm", '96mm', "88.36mm", '96mm', 0,0); //线，竖杠(上边距1,1左边距,上边距2,2左边距,intLineStyle, intLineWidth)
+            //收件人信息
+            LODOP.ADD_PRINT_IMAGE('45mm',"3mm" ,"7mm","7mm","<img border='0' style='width:24px;height:24px;' src='收（7mm）.png' />");  
+            LODOP.ADD_PRINT_TEXT('45mm',"13mm","","5mm","名字");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9); 
+            LODOP.ADD_PRINT_TEXT('45mm',"22mm","30mm","5mm","125****4856");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9); 
+            LODOP.ADD_PRINT_TEXT('45mm',"45mm","35mm","5mm","顺丰速运有限公司");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9);
+            LODOP.ADD_PRINT_TEXT('50mm',"13mm","65mm","10mm","重庆市重庆市渝北区财富中心财富大厦B座重庆显格房地产顾问有限公司");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9);
+            LODOP.ADD_PRINT_IMAGE('45mm',"78mm","17mm","9mm","<img border='0' style='width:16mm;height:8mm;' src='COD图片（宽17mm高9mm）.png' />");  
+            LODOP.ADD_PRINT_LINE("60.36mm",0,"60.36mm","96mm",0,1);  
+            LODOP.ADD_PRINT_TEXT('61mm',"6mm","30mm","5mm","到付 22 元");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","Arial"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9);
+            LODOP.SET_PRINT_STYLEA(0,"Bold",1); 
+            LODOP.ADD_PRINT_LINE("65.36mm",0,"65.36mm","33mm",0,1);   //横线
+            LODOP.ADD_PRINT_TEXT('66mm',"5mm","30mm","5mm","A22");  //进港信息 A22 
+            LODOP.SET_PRINT_STYLEA(0,"FontName","Arial"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",40);
+            LODOP.SET_PRINT_STYLEA(0,"Bold",1); 
+            LODOP.ADD_PRINT_LINE("88.36mm","0mm","88.36mm","65.3mm",0,1); //最底部横线
+            LODOP.ADD_PRINT_LINE("60.36mm", "33mm", "88.36mm", "33mm", 0,1);  //A22 右边竖线
+            LODOP.ADD_PRINT_LINE("60.36mm", "65mm", "88.36mm", "65mm", 0,1);  //二维码 右边竖线
+            LODOP.ADD_PRINT_BARCODE("64.36mm",'38mm','25mm','25mm',"QRCode","*123ABC4567890*"); //二维码
+            LODOP.ADD_PRINT_TEXT('60.36mm',"66mm",'9.5mm','26mm',"已检视");  //是否检视
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",20);
+            LODOP.SET_PRINT_STYLEA(0,"Bold",1); 
+            LODOP.ADD_PRINT_LINE("60.36mm","74mm", "88.36mm", "74mm", 0,1);  //检视右边竖线
+            LODOP.ADD_PRINT_IMAGE('61.36mm',"76mm" ,"15mm","17mm","<img border='0' style='width:55px;height:65px;' src='A标.jpg' />");   //A/B标图片
+            LODOP.ADD_PRINT_LINE("80.01mm","74mm","80.01mm","96mm",0,1);   //A/B标图片 下面横线
+            LODOP.ADD_PRINT_LINE("88.01mm","74mm","88.01mm","96mm",0,1);   //A/B标图片 下面横线
+            LODOP.ADD_PRINT_TEXT('79mm',"78mm",'16mm','8mm',"1A");  //是否检视
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",30);
+            LODOP.SET_PRINT_STYLEA(0,"Bold",1); 
+            ///附加连区样式 中间部分
+            LODOP.ADD_PRINT_LINE("90mm","0","90mm","96mm",0,1);   //头部横线  
+            LODOP.ADD_PRINT_LINE("90mm", '0', "150mm", '0', 0,1); //左边线，竖杠 
+            LODOP.ADD_PRINT_LINE("90mm", '96mm', "150mm", '96mm', 0,1); //左边线，竖杠
+            //logo and 热线
+            LODOP.ADD_PRINT_IMAGE("91mm","3mm","22mm","6mm","<img border='0' style='width:22mm;height:5mm;' src='logo.png' />");    //顺丰logo
+            LODOP.ADD_PRINT_IMAGE("97mm","3mm","22mm","6mm","<img border='0' style='width:22mm;height:5mm;' src='热线.png' />");  //顺丰热线电话
+            //寄件人 图标
+            LODOP.ADD_PRINT_IMAGE('93mm','27mm' ,"7mm","7mm","<img border='0' style='width:6mm;height:6mm;' src='寄(7mm).png' />");
+            LODOP.ADD_PRINT_TEXT('92mm',"36mm",'15mm','5mm',"熊小二");  // 寄件方 姓名
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9);
+            LODOP.ADD_PRINT_TEXT('92mm',"50mm",'25mm','5mm',"135****8564");  // 寄件方 联系电话
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9);
+            LODOP.ADD_PRINT_TEXT('92mm',"73mm",'25mm','5mm',"上海电子市场");  // 寄件方 公司名
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9);
+            LODOP.ADD_PRINT_TEXT('97mm',"36mm",'80mm','10mm',"上海市浦东新区世纪大佬88号");  // 寄件方 地址
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",9);
+            //分割线
+            LODOP.ADD_PRINT_LINE("104mm","0mm","104mm","96mm",0,1);   //分割横线1
+            // 增值服务
+            LODOP.ADD_PRINT_TEXT('106mm',"4mm",'20mm','10mm',"增值服务：");  // 增值服务
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('106mm',"20mm",'60mm','10mm',"没有什么增值服务");  // 增值服务内容
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('110mm',"4mm",'20mm','10mm',"寄托物：");  // 寄托物品
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('110mm',"20mm",'60mm','10mm',"寄托物品没有");  // 寄托物品内容
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('114mm',"4mm",'20mm','10mm',"件数：");  // 件数：
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('114mm',"13mm",'10mm','5mm',"1件");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('114mm',"20mm",'20mm','10mm',"计费重量：");  // 计费重量：
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('114mm',"35mm",'10mm','5mm',"1kg");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('114mm',"45mm",'20mm','10mm',"实际重量：");  // 实际重量：
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('114mm',"60mm",'10mm','5mm',"1kg");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('114mm',"70mm",'20mm','10mm',"费用合计：");  // 费用合计：
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('114mm',"85mm",'10mm','5mm',"22元");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","宋体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            //分割线
+            LODOP.ADD_PRINT_LINE("126mm","0","126mm","96mm",0,1);   //分割横线2
+            LODOP.ADD_PRINT_IMAGE('128mm','8mm' ,"21mm","21mm","<img border='0' style='width:75px;height:75px;' src='21_21 轻放.png' />");
+            LODOP.ADD_PRINT_IMAGE('128mm','37mm' ,"21mm","21mm","<img border='0' style='width:75px;height:75px;' src='21_21 蟹.png' />");
+            LODOP.ADD_PRINT_IMAGE('128mm','67mm' ,"21mm","21mm","<img border='0' style='width:75px;height:75px;' src='POD.jpg' />");
+            LODOP.ADD_PRINT_LINE("150mm","0","150mm","96mm",0,1);   //分割横线2
+            ///附加连区样式 底部部分
+            LODOP.ADD_PRINT_LINE("151mm",0,"151mm","96mm",0,1);   //头部横线
+            LODOP.ADD_PRINT_LINE("151mm", '0', "216mm", '0', 0,1); //左边线，竖杠 
+            LODOP.ADD_PRINT_LINE("151mm", '96mm', "216mm", '96mm', 0,1); //左边线，竖杠 
+            ///logo and 热线
+            LODOP.ADD_PRINT_IMAGE("153mm","3mm","16mm","6mm","<img border='0' style='width:15mm;height:5mm;' src='logo.png' />");    //顺丰logo
+            LODOP.ADD_PRINT_IMAGE("160mm","3mm","16mm","6mm","<img border='0' style='width:15mm;height:5mm;' src='热线.png' />");  //顺丰热线电话
+            LODOP.ADD_PRINT_BARCODE("153mm","30mm","54mm","9mm","128B","123456789012");
+            LODOP.SET_PRINT_STYLEA(0,"ShowBarText",0);  
+            LODOP.ADD_PRINT_TEXT("163mm","27mm","10mm","5mm","1/1");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体");  
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);  
+            LODOP.ADD_PRINT_TEXT("163mm","33mm","15mm","5mm","母单号");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体");  
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);  
+            LODOP.ADD_PRINT_TEXT("163mm","48mm","30mm","4mm","444 004 772 115");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","arial"); 
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            //产品类型 顺丰特惠
+            LODOP.ADD_PRINT_LINE("153mm","82mm","153mm","96mm",0,1);   //分割横线1
+            LODOP.ADD_PRINT_LINE("158mm","82mm","158mm","96mm",0,1);   //分割横线1
+            LODOP.ADD_PRINT_LINE("153mm","82mm","167mm","82mm",0,1);   //分割横线1
+            LODOP.ADD_PRINT_LINE("167mm","0mm","167mm","96mm",0,1);   //分割横线1
+            LODOP.ADD_PRINT_TEXT("155mm","83mm","20mm","5mm","产品类型");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体");  
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8); 
+            LODOP.ADD_PRINT_TEXT("161mm","83mm","20mm","5mm","顺丰特惠");  
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体");  
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8); 
+            //寄件人信息
+            LODOP.ADD_PRINT_IMAGE('169mm','2mm' ,"7mm","7mm","<img border='0' style='width:6mm;height:6mm;' src='寄(7mm).png' />");
+            LODOP.ADD_PRINT_TEXT('169mm',"12mm",'25mm','5mm',"寄件方：");  // 寄件方 姓名
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('169mm',"25mm",'15mm','5mm',"个人");  // 寄件方 联系电话
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('169mm',"35mm",'15mm','5mm',"熊大");  // 寄件方 联系电话
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('169mm',"45mm",'25mm','5mm',"135****8564");  // 寄件方 联系电话
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('173mm',"12mm",'80mm','5mm',"上海市浦东新区世纪大佬88号");  // 寄件方 地址
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_LINE("177mm","0mm","177mm","96mm",0,1);   //分割横线
+            //收件人信息
+            LODOP.ADD_PRINT_IMAGE('179mm','2mm' ,"7mm","7mm","<img border='0' style='width:6mm;height:6mm;' src='收（7mm）.png' />");
+            LODOP.ADD_PRINT_TEXT('179mm',"12mm",'25mm','5mm',"寄件方：");  // 收件人 姓名
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('179mm',"25mm",'15mm','5mm',"个人");  // 收件人 类型
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('179mm',"35mm",'15mm','5mm',"熊大");  // 收件人 联系电话
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('179mm',"45mm",'25mm','5mm',"135****8564");  // 收件人 联系电话
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('183mm',"12mm",'80mm','5mm',"上海市浦东新区世纪大佬88号");  // 收件人 地址
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_LINE("187mm","0mm","187mm","96mm",0,1);   //分割横线
+            // //寄托物：
+            LODOP.ADD_PRINT_TEXT('189mm',"2mm",'20mm','10mm',"寄托物：");  // 寄托物： 
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('189mm',"15mm",'15mm','10mm',"文件");  //  寄托物类型
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_LINE("199mm","0mm","199mm","31mm",0,1);   //分割横线
+            LODOP.ADD_PRINT_LINE("186.8mm","31mm","207mm","31mm",0,1);   //分割竖线
+            //付款方式
+            LODOP.ADD_PRINT_TEXT('201mm',"2mm",'20mm','10mm',"付款方式:");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('201mm',"16.5mm",'16mm','10mm',"寄付现结");    
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_LINE("207mm","0mm","207mm","96mm",0,1);   //分割横线
+            //附加信息
+            LODOP.ADD_PRINT_TEXT('187.8mm',"33mm",'20mm','5mm',"费用合计:");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('187.8mm',"47mm",'15mm','5mm',"22元");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('187.8mm',"55mm",'15mm','5mm',"运费:");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('187.8mm',"64mm",'15mm','5mm',"22元");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('187.8mm',"72mm",'20mm','5mm',"保价费用:");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('187.8mm',"87mm",'15mm','5mm',"22元");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            
+            LODOP.ADD_PRINT_TEXT('191.5mm',"33mm",'20mm','5mm',"包装费用:");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('191.5mm',"47mm",'15mm','5mm',"22元");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('191.5mm',"55mm",'18mm','5mm',"超重费用:");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('191.5mm',"69mm",'15mm','5mm',"22元");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('191.5mm',"78mm",'20mm','5mm',"优惠券:");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('191.5mm',"89mm",'15mm','5mm',"22元");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+
+            LODOP.ADD_PRINT_TEXT('195.4mm',"33mm",'20mm','5mm',"易碎件:");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('195.4mm',"44mm",'15mm','5mm',"22");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('195.4mm',"48mm",'18mm','5mm',"月结账号:");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('195.4mm',"67mm",'15mm','5mm',"");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('195.4mm',"70mm",'24mm','5mm',"第三方地区:");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('195.4mm',"87mm",'15mm','5mm',"22元");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+
+            LODOP.ADD_PRINT_TEXT('199.3mm',"33mm",'20mm','5mm',"签单返还:");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('199.3mm',"47mm",'15mm','5mm',"22元");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('199.3mm',"54mm",'18mm','5mm',"计费重量:");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('199.3mm',"68mm",'15mm','5mm',"22kg");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('199.3mm',"75.5mm",'20mm','5mm',"实际重量:");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('199.3mm',"89.5mm",'15mm','5mm',"22kg");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+
+            LODOP.ADD_PRINT_TEXT('203mm',"33mm",'20mm','5mm',"长*宽*高:");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('203mm',"47mm",'25mm','5mm',"7x8x6");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('203mm',"60mm",'24mm','5mm',"代收货款金额:");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('203mm',"80mm",'15mm','5mm',"3000元");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+
+
+            LODOP.ADD_PRINT_TEXT('209mm',"2mm",'15mm','5mm',"件数:");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('209mm',"10mm",'20mm','5mm',"1件");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+
+            LODOP.ADD_PRINT_LINE("207mm","16mm","216mm","16mm",0,1);   //分割竖线
+
+            LODOP.ADD_PRINT_TEXT('209mm',"17mm",'20mm','5mm',"计费重量:");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('209mm',"31mm",'20mm','5mm',"5KG");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+
+            LODOP.ADD_PRINT_LINE("207mm","38mm","216mm","38mm",0,1);   //分割竖线
+
+            LODOP.ADD_PRINT_TEXT('209mm',"39mm",'20mm','5mm',"收件员:");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('209mm',"50mm",'20mm','5mm',"欧阳正华");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('209mm',"63mm",'20mm','5mm',"收件时间:");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+            LODOP.ADD_PRINT_TEXT('209mm',"78mm",'20mm','10mm',"2019-06-14 00:00");   
+            LODOP.SET_PRINT_STYLEA(0,"FontName","黑体"); //字体样式
+            LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+
+            LODOP.ADD_PRINT_LINE("216mm","0","216mm","96mm",0,1);   //分割竖线
+            
+        }
+    </script>   
+    <p>进入<a href="javascript:;" onclick="javascript:CreatePrintPage_150();LODOP.PRINT_DESIGN();">丰密150模板设计</a> </p>
+    <p>进入<a href="javascript:;" onclick="javascript:CreatePrintPage_150();LODOP.PREVIEW();">丰密150模板的打印预览</a></p>
+    <p>进入<a href="javascript:;" onclick="javascript:CreatePrintPage_180();LODOP.PRINT_DESIGN();">丰密180模板设计</a> </p>
+    <p>进入<a href="javascript:;" onclick="javascript:CreatePrintPage_180();LODOP.PREVIEW();">丰密180模板的打印预览</a></p>
+    <p>进入<a href="javascript:;" onclick="javascript:CreatePrintPage_210();LODOP.PRINT_DESIGN();">丰密210模板设计</a> </p>
+    <p>进入<a href="javascript:;" onclick="javascript:CreatePrintPage_210();LODOP.PREVIEW();">丰密210模板的打印预览</a></p>
+</body>
+</html>
