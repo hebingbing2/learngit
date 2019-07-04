@@ -19,7 +19,7 @@ def get_img(fileName):
     print("Enter img address; \n")
     print("like (https://movie.douban.com/celebrity/1054449/photos/) , just for douban !!! ")
     img_add = input()
-    if not img_add:  
+    if img_add:  
         header = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 Safari/537.36'}
         response=requests.get(img_add, headers=header)
         selector=etree.HTML(response.content)
@@ -36,6 +36,7 @@ def get_img(fileName):
         print("finish!")
     else:
         print ("Img add is null ! \n")
+        print (img_add)
         go_on = input("try again? yes(Y), no(n) : ")
         if go_on == "Y" or go_on == "y":
             filename = input("Enter the file name for save img ! \n")
